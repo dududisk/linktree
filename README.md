@@ -43,7 +43,7 @@ Por ser um projeto estático, você não precisa de um servidor ou de processos 
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone git@github.com:dududisk/linktree.git
     ```
 2.  **Abra o arquivo `index.html`:**
     Navegue até a pasta do projeto e abra o arquivo `index.html` diretamente no seu navegador de preferência.

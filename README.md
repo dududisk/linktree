@@ -9,7 +9,7 @@ Um agregador de links no estilo "link in bio" para ser usado em redes sociais, t
 
 Você pode ver uma versão funcional do projeto original no link abaixo:
 
-- **[Clique aqui para ver o projeto online](https://maykbrito.github.io/devlinks/)**
+- **[Clique aqui para ver o projeto online](https://dududisk.github.io/linktree/)**
 
 ## 📸 Preview
 

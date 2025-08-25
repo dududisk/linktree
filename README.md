@@ -14,7 +14,8 @@ Você pode ver uma versão funcional do projeto original no link abaixo:
 ## 📸 Preview
 
 <p align="center">
-  <em>(Adicione aqui um print do seu projeto, se desejar)</em>
+  <em><img width="1073" height="837" alt="image" src="https://github.com/user-attachments/assets/85177c27-95c3-4279-8f0a-9a3b159e4fe0" />
+)</em>
 </p>
 <p align="center">
   O projeto conta com um tema claro e um tema escuro, que podem ser alternados dinamicamente.

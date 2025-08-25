@@ -1,0 +1,200 @@
+:root {
+  --text-color: #E0E0E0;
+  --bg-url: url(https://placehold.co/1x1/000000/000000); /* Placeholder */
+  --stroke-color: rgba(224, 224, 224, 0.5);
+  --surface-color: rgba(224, 224, 224, 0.1);
+  --surface-color-hover: rgba(224, 224, 224, 0.05);
+  --highlight-color: rgba(224, 224, 224, 0.2);
+  --switch-bg-url: url("https://api.iconify.design/ph/moon-stars-fill.svg?color=white");
+}
+
+.light {
+  --text-color: #212121;
+  --bg-url: url(https://placehold.co/1x1/ffffff/ffffff); /* Placeholder */
+  --stroke-color: rgba(33, 33, 33, 0.5);
+  --surface-color: rgba(33, 33, 33, 0.05);
+  --surface-color-hover: rgba(33, 33, 33, 0.02);
+  --highlight-color: rgba(33, 33, 33, 0.1);
+  --switch-bg-url: url("https://api.iconify.design/ph/sun-fill.svg?color=black");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #021024, #052659, #5483b3, #021024);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+.light body::before {
+   background: linear-gradient(45deg, #E0EAFC, #CFDEF3, #E0EAFC, #ffffff);
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+/* ===== REGRA DA IMAGEM ATUALIZADA ===== */
+#profile img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+  /* Adiciona uma transição suave para a propriedade 'transform' */
+  transition: transform 0.3s ease;
+}
+
+/* ===== NOVA REGRA DE HOVER ADICIONADA ===== */
+#profile img:hover {
+  /* Aumenta o tamanho da imagem em 10% */
+  transform: scale(1.1);
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+  cursor: pointer;
+}
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: var(--text-color);
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+@keyframes slide-in {
+  from { left: 0; }
+  to { left: 50%; }
+}
+
+@keyframes slide-back {
+  from { left: 50%; }
+  to { left: 0; }
+}

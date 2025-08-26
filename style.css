@@ -185,7 +185,7 @@ footer a {
   text-decoration: underline;
 }
 
-@keyframes slide-in {
+@keyframes slide-in { /* ajustando a responsoividade em telas menore */
   from { left: 0; }
   to { left: 50%; }
 }

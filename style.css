@@ -1,6 +1,6 @@
 :root {
   --text-color: #E0E0E0;
-  --bg-url: url(https://placehold.co/1x1/000000/000000); /* Placeholder */
+  --bg-url: url(https://placehold.co/1x1/000000/000000);
   --stroke-color: rgba(224, 224, 224, 0.5);
   --surface-color: rgba(224, 224, 224, 0.1);
   --surface-color-hover: rgba(224, 224, 224, 0.05);
@@ -10,7 +10,7 @@
 
 .light {
   --text-color: #212121;
-  --bg-url: url(https://placehold.co/1x1/ffffff/ffffff); /* Placeholder */
+  --bg-url: url(https://placehold.co/1x1/ffffff/ffffff);
   --stroke-color: rgba(33, 33, 33, 0.5);
   --surface-color: rgba(33, 33, 33, 0.05);
   --surface-color-hover: rgba(33, 33, 33, 0.02);
@@ -41,6 +41,7 @@ body::before {
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   z-index: -1;
+  background-attachment: fixed;
 }
 
 .light body::before {
@@ -65,20 +66,15 @@ body::before {
   padding: 24px;
 }
 
-/* ===== REGRA DA IMAGEM ATUALIZADA ===== */
 #profile img {
   width: 112px;
   height: 112px;
   border-radius: 50%;
   object-fit: cover;
-  
-  /* Adiciona uma transição suave para a propriedade 'transform' */
   transition: transform 0.3s ease;
 }
 
-/* ===== NOVA REGRA DE HOVER ADICIONADA ===== */
 #profile img:hover {
-  /* Aumenta o tamanho da imagem em 10% */
   transform: scale(1.1);
 }
 
@@ -189,7 +185,7 @@ footer a {
   text-decoration: underline;
 }
 
-@keyframes slide-in {
+@keyframes slide-in { /* ajustando a responsoividade em telas menores! */
   from { left: 0; }
   to { left: 50%; }
 }
@@ -197,4 +193,18 @@ footer a {
 @keyframes slide-back {
   from { left: 50%; }
   to { left: 0; }
+}
+
+@media (max-width: 768px) {
+  #container {
+    padding: 0 16px;
+  }
+
+  ul {
+    padding: 16px 0;
+  }
+
+  #social-links {
+    padding: 16px 0;
+  }
 }

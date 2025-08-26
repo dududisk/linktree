@@ -1,6 +1,6 @@
 :root {
   --text-color: #E0E0E0;
-  --bg-url: url(https://placehold.co/1x1/000000/000000);
+  --bg-url: url(https://placehold.co/1x1/000000/000000); /* Placeholder */
   --stroke-color: rgba(224, 224, 224, 0.5);
   --surface-color: rgba(224, 224, 224, 0.1);
   --surface-color-hover: rgba(224, 224, 224, 0.05);
@@ -10,7 +10,7 @@
 
 .light {
   --text-color: #212121;
-  --bg-url: url(https://placehold.co/1x1/ffffff/ffffff);
+  --bg-url: url(https://placehold.co/1x1/ffffff/ffffff); /* Placeholder */
   --stroke-color: rgba(33, 33, 33, 0.5);
   --surface-color: rgba(33, 33, 33, 0.05);
   --surface-color-hover: rgba(33, 33, 33, 0.02);
@@ -175,7 +175,7 @@ ul li a:hover {
 }
 
 footer {
-  padding: 24px 0;
+  padding: 24px 0 0 0;
   text-align: center;
   font-size: 14px;
 }
